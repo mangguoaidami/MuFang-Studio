@@ -256,9 +256,25 @@ const AuthNavigationMap: NavigationRouteConfigMap = {
   ['Forgot Password']: ForgotPasswordContainer,
 };
 
-const ThemesNavigator: NavigationContainer = createStackNavigator(
+// const ThemesNavigator: NavigationContainer = createStackNavigator(
+//   {
+//     ['Themes']: ThemesContainer,
+//   }, {
+//     defaultNavigationOptions: MenuNavigationOptions,
+//   },
+// );
+const MysNavigator: NavigationContainer = createStackNavigator(
   {
+    ['ProfileSettings1Container']: ProfileSettings1Container,
     ['Themes']: ThemesContainer,
+  }, {
+    defaultNavigationOptions: MenuNavigationOptions,
+  },
+);
+
+const HomeNavigator: NavigationContainer = createStackNavigator(
+  {
+    ['Home']: ArticleList4Container,
   }, {
     defaultNavigationOptions: MenuNavigationOptions,
   },
@@ -305,14 +321,38 @@ const LayoutsNavigator: NavigationContainer = createStackNavigator(
 );
 
 const MenuNavigator: NavigationContainer = createBottomTabNavigator({
-  ['Layouts']: LayoutsNavigator,
-  ['Components']: ComponentsNavigator,
-  ['Themes']: ThemesNavigator,
+  ['Dashboard']: HomeNavigator,
+  ['ArticleList2Container']: ArticleList2Container,
+  ['ListContainer']: ListContainer,
+  // ['Components']: ComponentsNavigator,
+  // ['Themes']: ThemesNavigator,
+  ['My']: MysNavigator ,//ProfileSettings1Container,
+  //Profile6Container
 }, {
   tabBarComponent: MenuContainer,
 });
 
+const AuthStack = createStackNavigator({
+  // SignIn: SignIn1Container,
+  ['Sign In 1']: SignIn3Container,
+  // Login: Login,
+  // SignIn: SignIn,
+  //  Writting: Writting, 
+  // ForgetPassword: ForgetPassword,
+  // UserProtocol: UserProtocol,
+}
+,
+{
+  defaultNavigationOptions: {
+    header: null
+  },
+}
+);
+
+
+
 const AppNavigator: NavigationContainer = createStackNavigator({
+  // Auth: AuthStack,
   ['Home']: MenuNavigator,
   ...AuthNavigationMap,
   ...SocialNavigationMap,
@@ -320,6 +360,7 @@ const AppNavigator: NavigationContainer = createStackNavigator({
   ...MessagingNavigationMap,
   ...DarhboardsNavigationMap,
   ...EcommerceNavigationMap,
+  
 }, {
   headerMode: 'screen',
   defaultNavigationOptions: {

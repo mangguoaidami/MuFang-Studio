@@ -2,6 +2,9 @@ import React from 'react';
 import {
   ButtonProps,
   View,
+  Alert,
+  TouchableOpacity,
+  Text,
 } from 'react-native';
 import {
   ThemedComponentProps,
@@ -19,16 +22,22 @@ import {
   ContainerView,
   textStyle,
 } from '@src/components/common';
+import { NavigationScreenProps } from 'react-navigation';
 
 interface ComponentProps {
   profile: Profile;
   onUploadPhotoButtonPress: () => void;
   onButtonPress: () => void;
+  setThemePress: () => void;
 }
 
 export type ProfileSettings1Props = ThemedComponentProps & ComponentProps;
 
 class ProfileSettings1Component extends React.Component<ProfileSettings1Props> {
+
+  // constructor() {
+  //   super(props)
+  // }
 
   private onButtonPress = () => {
     this.props.onButtonPress();
@@ -37,6 +46,10 @@ class ProfileSettings1Component extends React.Component<ProfileSettings1Props> {
   private onPhotoButtonPress = () => {
     this.props.onUploadPhotoButtonPress();
   };
+
+  private setTheme = () => {
+    this.props.setThemePress();
+  }
 
   private renderPhotoButton = (): React.ReactElement<ButtonProps> => {
     const { themedStyle } = this.props;
@@ -95,17 +108,29 @@ class ProfileSettings1Component extends React.Component<ProfileSettings1Props> {
             value={`${profile.height} cm`}
           />
         </View>
+
         <View style={themedStyle.contactSection}>
           <ProfileSetting
             style={themedStyle.profileSetting}
             hint='Email'
             value={profile.email}
+            // onPressHandle={()=> {}}
           />
           <ProfileSetting
             style={themedStyle.profileSetting}
             hint='Phone Number'
             value={profile.phoneNumber}
+            // onPressHandle={()=> {}}
           />
+          <ProfileSetting
+              style={themedStyle.profileSetting}
+              hint='Set Theme'
+              value='⭐🌈🌒🌓🌔🌕'
+              onPressHandle={this.setTheme}
+            />
+          {/* <TouchableOpacity onPress={this.setTheme}>
+            
+          </TouchableOpacity> */}
         </View>
         <Button
           style={themedStyle.button}

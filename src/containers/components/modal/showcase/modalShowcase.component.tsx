@@ -43,8 +43,10 @@ export class ModalShowcase extends React.Component<any, ModalShowcaseState> {
         </Modal>
         <Button
           style={styles.button}
-          onPress={this.onToggleModal}>
-          Show
+          onPress={this.onToggleModal}
+          appearance='outline'
+          >
+          check?
         </Button>
       </React.Fragment>
     );

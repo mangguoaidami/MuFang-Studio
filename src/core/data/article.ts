@@ -11,14 +11,18 @@ import {
   imageArticle3Bg,
   imageArticle2Bg,
   imageArticle4Bg,
+  homeImg1,
+  homeImg2,
+  homeImg3,
+  homeImg4,
 } from '@src/assets/images';
 
 /* tslint:disable */
 
 export const articles: Article[] = [
   {
-    image: imageArticle1Bg,
-    title: 'How To Eat Healthy',
+    image: homeImg1,
+    title: 'How To Learn To Paint',
     description: 'The easiest way to make sure your inter meal nibbling stays on track is to have...',
     content: 'There\'s a lot of advice out there on how to eat healthy, and if we\'re being honest, it can sometimes feel like too much to think about. Especially when you\'re hungry. Remember when you were a kid and eating was as simple as open, chew, enjoy? Yes, those were simpler times. Now, knowing how to eat healthy doesn\'t seem quite as straightforward. Between the diet fads, gourmet trends, and a rotating roster of superfoods, eating well has gotten, well, complicated.',
     author: profile2,
@@ -28,7 +32,7 @@ export const articles: Article[] = [
     likes: 320,
   },
   {
-    image: imageArticle2Bg,
+    image: homeImg2,
     title: 'Why Is The Workout Important?',
     description: 'The easiest way to make sure your inter meal nibbling stays',
     content: 'There\'s a lot of advice out there on how to eat healthy, and if we\'re being honest, it can sometimes feel like too much to think about. Especially when you\'re hungry. Remember when you were a kid and eating was as simple as open, chew, enjoy? Yes, those were simpler times. Now, knowing how to eat healthy doesn\'t seem quite as straightforward. Between the diet fads, gourmet trends, and a rotating roster of superfoods, eating well has gotten, well, complicated.',
@@ -39,8 +43,8 @@ export const articles: Article[] = [
     likes: 320,
   },
   {
-    image: imageArticle3Bg,
-    title: 'The 5 Rules Of Morning Workouts',
+    image: homeImg3,
+    title: 'Partners For Progress Together',
     description: 'This one has to do more with habit than anything. You create the expectation...',
     content: 'There\'s a lot of advice out there on how to eat healthy, and if we\'re being honest, it can sometimes feel like too much to think about. Especially when you\'re hungry. Remember when you were a kid and eating was as simple as open, chew, enjoy? Yes, those were simpler times. Now, knowing how to eat healthy doesn\'t seem quite as straightforward. Between the diet fads, gourmet trends, and a rotating roster of superfoods, eating well has gotten, well, complicated.',
     author: profile4,
@@ -50,8 +54,8 @@ export const articles: Article[] = [
     likes: 245,
   },
   {
-    image: imageArticle4Bg,
-    title: 'Light & Easy Breakfasts',
+    image: homeImg4,
+    title: 'Oil Painting & Sketch',
     description: 'This one has to do more with habit than anything. You create the expectation...',
     content: 'There\'s a lot of advice out there on how to eat healthy, and if we\'re being honest, it can sometimes feel like too much to think about. Especially when you\'re hungry. Remember when you were a kid and eating was as simple as open, chew, enjoy? Yes, those were simpler times. Now, knowing how to eat healthy doesn\'t seem quite as straightforward. Between the diet fads, gourmet trends, and a rotating roster of superfoods, eating well has gotten, well, complicated.',
     author: profile5,

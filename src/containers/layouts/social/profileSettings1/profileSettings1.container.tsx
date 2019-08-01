@@ -20,6 +20,12 @@ export class ProfileSettings1Container extends React.Component<NavigationScreenP
   private onButtonPress = () => {
     this.props.navigation.goBack();
   };
+  private setThemePress = () => {
+    this.props.navigation.navigate({
+      routeName: 'Themes',
+      key: 'aaa',
+    })
+  };
 
   public render(): React.ReactNode {
     return (
@@ -27,6 +33,7 @@ export class ProfileSettings1Container extends React.Component<NavigationScreenP
         profile={this.state.profile}
         onUploadPhotoButtonPress={this.onUploadPhotoButtonPress}
         onButtonPress={this.onButtonPress}
+        setThemePress={this.setThemePress}
       />
     );
   }

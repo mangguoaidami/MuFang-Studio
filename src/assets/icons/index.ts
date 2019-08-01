@@ -441,6 +441,17 @@ export const EyeOffIconFill = (style: StyleProp<ImageStyle>): IconElement => {
   return Icon(source, style);
 };
 
+
+//person-outline
+export const personOutline = (style: StyleProp<ImageStyle>): IconElement => {
+  const source: IconSource = {
+    imageSource: require('./eva/person-outline.png'),
+  };
+
+  return Icon(source, style);
+};
+
+
 export const ColorPaletteIconOutline = (style: StyleProp<ImageStyle>): IconElement => {
   const source: IconSource = {
     imageSource: require('./eva/color-palette-outline.png'),

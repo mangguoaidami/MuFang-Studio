@@ -9,6 +9,10 @@ export class SignIn1Container extends React.Component<NavigationScreenProps> {
 
   private onSignInPress = (data: SignInForm1Data) => {
     this.props.navigation.goBack();
+    // this.props.navigation.navigate({
+    //   key: this.navigationKey,
+    //   routeName: 'home',
+    // });
   };
 
   private onSignUpPress = () => {

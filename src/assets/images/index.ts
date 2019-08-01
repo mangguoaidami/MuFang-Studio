@@ -12,6 +12,13 @@ export const imageSignIn1Bg: ImageSource = {
   imageSource: require('./source/image-background-sign-in-1.jpg'),
 };
 
+export const SinginImg1: ImageSource = {
+  imageSource: require('./source/SinginImg1.jpeg'),
+};
+
+//SinginImg1
+
+
 export const imageSignIn3Bg: ImageSource = {
   imageSource: require('./source/image-background-auth-3.jpg'),
 };
@@ -327,6 +334,22 @@ export const imageArticle1Bg: ImageSource = {
   imageSource: require('./source/image-article-background-1.jpg'),
 };
 
+export const homeImg1: ImageSource = {
+  imageSource: require('./source/homeImg1.jpeg'),
+};
+
+export const homeImg2: ImageSource = {
+  imageSource: require('./source/homeImg2.jpeg'),
+};
+
+export const homeImg3: ImageSource = {
+  imageSource: require('./source/homeImg3.jpeg'),
+};
+
+export const homeImg4: ImageSource = {
+  imageSource: require('./source/homeImg4.jpeg'),
+};
+
 export const imageArticle2Bg: ImageSource = {
   imageSource: require('./source/image-article-background-2.jpg'),
 };
@@ -417,7 +440,7 @@ export const imageProduct6: ImageSource = {
 };
 
 export const splash: ImageSource = {
-  imageSource: require('./source/splash.png'),
+  imageSource: require('./source/splash0.jpeg'),
 };
 
 export const movieImage1: ImageSource = new RemoteImage(

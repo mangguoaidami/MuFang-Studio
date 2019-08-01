@@ -21,6 +21,7 @@ import {
 import {
   imageSignIn3Bg,
   ImageSource,
+  SinginImg1,
 } from '@src/assets/images';
 
 interface ComponentProps {
@@ -41,7 +42,7 @@ class SignIn3Component extends React.Component<SignIn3Props, State> {
     formData: undefined,
   };
 
-  private backgroundImage: ImageSource = imageSignIn3Bg;
+  private backgroundImage: ImageSource = SinginImg1;
 
   private onSignInButtonPress = () => {
     this.props.onSignInPress(this.state.formData);
@@ -76,7 +77,7 @@ class SignIn3Component extends React.Component<SignIn3Props, State> {
             <Text
               style={themedStyle.signInLabel}
               category='s1'>
-              Sign in to your account
+              Sign in to your account111
             </Text>
           </View>
           <SignInForm2

@@ -14,6 +14,9 @@ import {
   ColorPaletteIconOutline,
   LayoutIconOutline,
   StarIconOutline,
+  GridIconOutline,
+  DoneAllIconOutline,
+  personOutline,
 } from '@src/assets/icons';
 import { themes } from '@src/core/themes';
 
@@ -40,17 +43,29 @@ class MenuComponent extends React.Component<Props> {
             appearance='noIndicator'
             selectedIndex={selectedIndex}
             onSelect={this.onTabSelect}>
-            <BottomNavigationTab
-              title='Layouts'
-              icon={LayoutIconOutline}
+              <BottomNavigationTab
+              title='Home'
+              icon={GridIconOutline}
             />
             <BottomNavigationTab
-              title='Components'
+              title='course'
+              icon={ColorPaletteIconOutline}
+            />
+            <BottomNavigationTab
+              title='CheckList'
+              icon={DoneAllIconOutline}
+            />
+            {/* <BottomNavigationTab
+              title='Comp'
               icon={StarIconOutline}
-            />
-            <BottomNavigationTab
+            /> */}
+            {/* <BottomNavigationTab
               title='Themes'
               icon={ColorPaletteIconOutline}
+            /> */}
+            <BottomNavigationTab
+              title='My'
+              icon={personOutline}
             />
           </BottomNavigation>
         </ThemeProvider>

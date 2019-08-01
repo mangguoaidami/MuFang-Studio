@@ -30,6 +30,7 @@ import {
 import {
   imageSignIn1Bg,
   ImageSource,
+  SinginImg1,
 } from '@src/assets/images';
 
 interface ComponentProps {

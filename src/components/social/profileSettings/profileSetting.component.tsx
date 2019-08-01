@@ -5,6 +5,7 @@ import {
   TextStyle,
   View,
   ViewProps,
+  TouchableOpacity,
 } from 'react-native';
 import {
   ThemedComponentProps,
@@ -17,6 +18,7 @@ import { textStyle } from '@src/components/common';
 interface ComponentProps {
   hint?: string;
   value: string;
+  onPressHandle?: any;
 }
 
 export type ProfileSettingProps = ComponentProps & ViewProps & ThemedComponentProps;
@@ -34,16 +36,17 @@ class ProfileSettingComponent extends React.Component<ProfileSettingProps> {
   };
 
   public render(): React.ReactNode {
-    const { style, themedStyle, hint, value, ...restProps } = this.props;
+    const { style, themedStyle, hint, value, onPressHandle, ...restProps } = this.props;
     const { container, hintLabel, valueLabel } = themedStyle;
 
     return (
-      <View
+      <TouchableOpacity
         {...restProps}
+        onPress={(onPressHandle)?onPressHandle:()=>{}}
         style={[container, style]}>
         {hint ? this.renderTextElement(hint, hintLabel) : null}
         {this.renderTextElement(value, valueLabel)}
-      </View>
+      </TouchableOpacity>
     );
   }
 }
