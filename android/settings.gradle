@@ -1,0 +1,3 @@
+rootProject.name = 'MuFangStudio'
+
+include ':app'

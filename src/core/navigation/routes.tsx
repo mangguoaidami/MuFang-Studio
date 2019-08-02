@@ -352,7 +352,7 @@ const AuthStack = createStackNavigator({
 
 
 const AppNavigator: NavigationContainer = createStackNavigator({
-  // Auth: AuthStack,
+  Auth: AuthStack,
   ['Home']: MenuNavigator,
   ...AuthNavigationMap,
   ...SocialNavigationMap,

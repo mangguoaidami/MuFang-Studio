@@ -3,8 +3,9 @@
   "version": "2.0.1",
   "private": true,
   "author": "akveo",
+  "main": "node_modules/expo/AppEntry.js",
   "scripts": {
-    "start": "react-native start",
+    "start": "expo start",
     "start:dev": "npm run env:set -- dev && npm start -- -c",
     "start:prod": "npm run env:set -- prod && npm start -- -c",
     "env:set": "./scripts/environment/set-env.sh",
@@ -17,11 +18,11 @@
     "ci:build": "npm run env:set -- prod && npm run build",
     "conventional-changelog": "conventional-changelog",
     "version:changelog": "npm run conventional-changelog -- -i ./CHANGELOG.md -s",
-    "ios": "react-native run-ios",
-    "android": "react-native run-android"
+    "build:ios": "react-native bundle --entry-file='index.js' --bundle-output='./ios/main.jsbundle' --dev=false --platform='ios'"
   },
   "dependencies": {
     "@eva-design/eva": "^1.0.1",
+    "expo": "^33.0.6",
     "expo-analytics": "^1.0.8",
     "expo-camera": "^5.0.1",
     "expo-constants": "^5.0.1",
