@@ -15,7 +15,7 @@ export class ArticleList3Container extends React.Component<NavigationScreenProps
   };
 
   private onItemPress = (article: Article) => {
-
+    this.props.navigation.navigate('Article 2');
   };
 
   private onItemLikePress = (article: Article) => {

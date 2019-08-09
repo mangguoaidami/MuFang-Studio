@@ -321,8 +321,9 @@ const LayoutsNavigator: NavigationContainer = createStackNavigator(
 );
 
 const MenuNavigator: NavigationContainer = createBottomTabNavigator({
-  ['Dashboard']: HomeNavigator,
-  ['ArticleList2Container']: ArticleList2Container,
+  ['Home']: HomeNavigator,
+  ['Daily']: ArticleList2Container,
+  ['Course']: ArticleList3Container,
   ['ListContainer']: ListContainer,
   // ['Components']: ComponentsNavigator,
   // ['Themes']: ThemesNavigator,
@@ -352,7 +353,7 @@ const AuthStack = createStackNavigator({
 
 
 const AppNavigator: NavigationContainer = createStackNavigator({
-  Auth: AuthStack,
+  // Auth: AuthStack,
   ['Home']: MenuNavigator,
   ...AuthNavigationMap,
   ...SocialNavigationMap,

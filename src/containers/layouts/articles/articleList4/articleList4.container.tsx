@@ -15,7 +15,24 @@ export class ArticleList4Container extends React.Component<NavigationScreenProps
   };
 
   private onItemPress = (index: number) => {
-
+    console.log('index', index);
+    switch(index) {
+      case 0:
+        this.props.navigation.navigate('Article List 1');
+        break;
+        case 1:
+          this.props.navigation.navigate('Article 2');
+          break;
+        case 2:
+          this.props.navigation.navigate('Article 2');
+          break;
+        case 3:
+          this.props.navigation.navigate('Article 2');
+          break;
+        default:
+          this.props.navigation.navigate('Article 2');
+          break;
+    }
   };
 
   private onItemLikePress = (index: number) => {

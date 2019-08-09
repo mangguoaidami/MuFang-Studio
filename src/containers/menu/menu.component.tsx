@@ -17,6 +17,8 @@ import {
   GridIconOutline,
   DoneAllIconOutline,
   personOutline,
+  CalendarOutline,
+  BatteryOutline,
 } from '@src/assets/icons';
 import { themes } from '@src/core/themes';
 
@@ -48,12 +50,16 @@ class MenuComponent extends React.Component<Props> {
               icon={GridIconOutline}
             />
             <BottomNavigationTab
-              title='course'
+              title='Daily'
               icon={ColorPaletteIconOutline}
             />
             <BottomNavigationTab
+              title='Course'
+              icon={BatteryOutline}
+            />
+            <BottomNavigationTab
               title='CheckList'
-              icon={DoneAllIconOutline}
+              icon={CalendarOutline}
             />
             {/* <BottomNavigationTab
               title='Comp'

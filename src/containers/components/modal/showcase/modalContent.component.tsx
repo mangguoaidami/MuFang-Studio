@@ -65,7 +65,7 @@ class ModalContentComponent extends React.Component<ModalContentProps> {
           appearance='outline'
           size='tiny'
           onPress={this.onFollowPress}>
-          FOLLOW
+          OK?
         </Button>
       </View>
     );

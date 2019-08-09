@@ -612,6 +612,24 @@ export const FlashIconOutline = (style: StyleProp<ImageStyle>): IconElement => {
   return Icon(source, style);
 };
 
+//battery-outline
+export const BatteryOutline = (style: StyleProp<ImageStyle>): IconElement => {
+  const source: IconSource = {
+    imageSource: require('./eva/battery-outline.png'),
+  };
+
+  return Icon(source, style);
+};
+
+//calendar-outline
+export const CalendarOutline = (style: StyleProp<ImageStyle>): IconElement => {
+  const source: IconSource = {
+    imageSource: require('./eva/calendar-outline.png'),
+  };
+
+  return Icon(source, style);
+};
+
 export const DoneAllIconOutline = (style: StyleProp<ImageStyle>): IconElement => {
   const source: IconSource = {
     imageSource: require('./eva/done-all-outline.png'),

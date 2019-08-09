@@ -440,7 +440,7 @@ export const imageProduct6: ImageSource = {
 };
 
 export const splash: ImageSource = {
-  imageSource: require('./source/splash0.jpeg'),
+  imageSource: require('./source/splash0.png'),
 };
 
 export const movieImage1: ImageSource = new RemoteImage(

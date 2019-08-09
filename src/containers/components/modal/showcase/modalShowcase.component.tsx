@@ -11,6 +11,7 @@ interface ModalShowcaseState {
   visible: boolean;
 }
 
+
 export class ModalShowcase extends React.Component<any, ModalShowcaseState> {
 
   public state: ModalShowcaseState = {
@@ -37,7 +38,7 @@ export class ModalShowcase extends React.Component<any, ModalShowcaseState> {
           visible={this.state.visible}
           onBackdropPress={this.onBackdropPress}>
           <ModalContent
-            profile={profile1}
+            profile={this.props.profile}
             onFollowPress={this.onToggleModal}
           />
         </Modal>

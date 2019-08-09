@@ -21,6 +21,7 @@ import {
   textStyle,
 } from '@src/components/common';
 
+
 interface ComponentProps {
   articles: Article[];
   onItemPress: (index: number) => void;
