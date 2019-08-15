@@ -265,11 +265,17 @@ const AuthNavigationMap: NavigationRouteConfigMap = {
 // );
 const MysNavigator: NavigationContainer = createStackNavigator(
   {
-    ['ProfileSettings1Container']: ProfileSettings1Container,
+    ['Personal center']: ProfileSettings1Container,
     ['Themes']: ThemesContainer,
-  }, {
-    defaultNavigationOptions: MenuNavigationOptions,
-  },
+  }, 
+  // {
+  //   defaultNavigationOptions: MenuNavigationOptions,
+  // },
+  {
+    defaultNavigationOptions: {
+      header: null
+    },
+  }
 );
 
 const HomeNavigator: NavigationContainer = createStackNavigator(
@@ -324,7 +330,7 @@ const MenuNavigator: NavigationContainer = createBottomTabNavigator({
   ['Home']: HomeNavigator,
   ['Daily']: ArticleList2Container,
   ['Course']: ArticleList3Container,
-  ['ListContainer']: ListContainer,
+  ['CheckList']: ListContainer,
   // ['Components']: ComponentsNavigator,
   // ['Themes']: ThemesNavigator,
   ['My']: MysNavigator ,//ProfileSettings1Container,

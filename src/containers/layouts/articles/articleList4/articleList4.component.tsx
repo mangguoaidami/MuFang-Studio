@@ -20,11 +20,12 @@ import {
   ContainerView,
   textStyle,
 } from '@src/components/common';
+import { NavigationScreenProps } from 'react-navigation';
 
 
 interface ComponentProps {
   articles: Article[];
-  onItemPress: (index: number) => void;
+  onItemPress: (article: Article) => void;
   onItemCommentPress: (index: number) => void;
   onItemLikePress: (index: number) => void;
 }
@@ -34,11 +35,12 @@ export type ArticleList4Props = ThemedComponentProps & ComponentProps;
 class ArticleList4Component extends React.Component<ArticleList4Props> {
 
   private onReadButtonPress = () => {
-    this.props.onItemPress(0);
+    // this.props.onItemPress(0);
+    // this.props.navigation.navigate('Article List 1');
   };
 
-  private onItemPress = (index: number) => {
-    this.props.onItemPress(index + 1);
+  private onItemPress = (article: Article) => {
+    this.props.onItemPress(article);
   };
 
   private onItemCommentPress = (index: number) => {
@@ -65,6 +67,7 @@ class ArticleList4Component extends React.Component<ArticleList4Props> {
         onPress={this.onItemPress}
         onCommentPress={this.onItemCommentPress}
         onLikePress={this.onItemLikePress}
+        article={item}
       />
     );
   };
@@ -91,7 +94,8 @@ class ArticleList4Component extends React.Component<ArticleList4Props> {
             style={themedStyle.readButton}
             textStyle={textStyle.button}
             status='white'
-            onPress={this.onReadButtonPress}>
+            onPress={this.onReadButtonPress}
+            >
             READ
           </Button>
         </ArticleHeader>

@@ -31,7 +31,7 @@ interface State {
 export class Article3Container extends React.Component<NavigationScreenProps, State> {
 
   public state: State = {
-    article: articles[0],
+    article: this.props.navigation.getParam('params'),//article: this.props.navigation.getParam('params')
     comments: comments,
     currentCommentText: '',
   };

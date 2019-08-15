@@ -51,11 +51,11 @@ class MenuComponent extends React.Component<Props> {
             />
             <BottomNavigationTab
               title='Daily'
-              icon={ColorPaletteIconOutline}
+              icon={BatteryOutline}
             />
             <BottomNavigationTab
               title='Course'
-              icon={BatteryOutline}
+              icon={ColorPaletteIconOutline}
             />
             <BottomNavigationTab
               title='CheckList'

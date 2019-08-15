@@ -20,17 +20,17 @@ export const CenterTopNavigation = (props?: TopNavigationProps): TopNavigationEl
     <TopNavigation
       {...props}
       alignment='center'
-      title='Title'
-      subtitle='Subtitle'
+      title='Setting'
+      // subtitle='Subtitle'
       leftControl={renderLeftControl()}
       rightControls={renderRightControls()}
     />
-  );
+  )
 };
 
 const renderLeftControl = (): TopNavigationActionElement => {
   return (
-    <TopNavigationAction icon={ArrowIosBackFill} />
+    <TopNavigationAction icon={ArrowIosBackFill} onPress={()=>console.log('ok')} />
   );
 };
 

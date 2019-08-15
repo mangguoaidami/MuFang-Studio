@@ -14,6 +14,8 @@ import {
 import { Text } from '@kitten/ui';
 import { ArticleActivityBar } from '@src/components/articles';
 import { textStyle } from '@src/components/common';
+import { Article } from '@src/core/model';
+import { articles } from '@src/core/data/article';
 
 interface ListDerivedProps {
   index?: number;
@@ -25,9 +27,10 @@ interface ComponentProps extends TouchableOpacityProps, ListDerivedProps {
   title: string;
   comments: number;
   likes: number;
-  onPress: (index: number) => void;
+  onPress: (artical: Article) => void;
   onCommentPress: (index: number) => void;
   onLikePress: (index: number) => void;
+  article: Article;
 }
 
 export type ArticleList4ItemProps = ThemedComponentProps & ComponentProps;
@@ -35,7 +38,8 @@ export type ArticleList4ItemProps = ThemedComponentProps & ComponentProps;
 class ArticleList4ItemComponent extends React.Component<ArticleList4ItemProps> {
 
   private onPress = () => {
-    this.props.onPress(this.props.index);
+    this.props.onPress(this.props.article);
+    // console.log('propss', this.props.article)
   };
 
   private onCommentButtonPress = () => {

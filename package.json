@@ -33,7 +33,10 @@
     "react-native-calendars": "^1.205.0",
     "react-native-keyboard-aware-scroll-view": "^0.8.0",
     "react-native-ui-kitten": "^4.1.0",
-    "react-navigation": "^3.11.0"
+    "react-navigation": "^3.11.0",
+    "ws": ">=3.3.1",
+    "braces": ">=2.3.1",
+    "mem": ">=4.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.1.2",

@@ -24,7 +24,7 @@ type ComponentProps = NavigationScreenProps & StyledComponentProps;
 
 class ListContainerComponent extends React.Component<ComponentProps> {
   public state: State = {
-    isStudent: false,  //学生用户
+    isStudent: true,  //if学生用户?
     items: {},
   };
 

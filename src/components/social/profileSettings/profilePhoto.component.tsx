@@ -34,6 +34,7 @@ class ProfilePhotoComponent extends React.Component<ProfilePhotoProps> {
         <Avatar
           style={[style, themedStyle.avatar]}
           {...restProps}
+          
         />
         {button ? this.renderEditElement() : null}
       </View>

@@ -1,7 +1,7 @@
 import React from 'react';
 import {
   ImageBackground,
-  View,
+  View
 } from 'react-native';
 import {
   ThemedComponentProps,
@@ -19,6 +19,7 @@ import {
 } from '@src/components/common';
 import { ClockIconOutline } from '@src/assets/icons';
 import { Article } from '@src/core/model';
+import { NavigationScreenProps } from 'react-navigation';
 
 interface ComponentProps {
   article: Article;
@@ -26,7 +27,7 @@ interface ComponentProps {
   onLikePress: () => void;
 }
 
-export type Article2Props = ThemedComponentProps & ComponentProps;
+export type Article2Props = ThemedComponentProps & ComponentProps ;
 
 class Article2Component extends React.Component<Article2Props> {
 
@@ -40,6 +41,8 @@ class Article2Component extends React.Component<Article2Props> {
 
   public render(): React.ReactNode {
     const { themedStyle, article } = this.props;
+    // console.log('article', article);
+    // console.log('this.props', this.props);
 
     return (
       <ContainerView style={themedStyle.container}>

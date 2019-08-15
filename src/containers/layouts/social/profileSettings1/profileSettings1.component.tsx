@@ -29,6 +29,7 @@ interface ComponentProps {
   onUploadPhotoButtonPress: () => void;
   onButtonPress: () => void;
   setThemePress: () => void;
+  // setByInput: () => void;
 }
 
 export type ProfileSettings1Props = ThemedComponentProps & ComponentProps;
@@ -50,6 +51,9 @@ class ProfileSettings1Component extends React.Component<ProfileSettings1Props> {
   private setTheme = () => {
     this.props.setThemePress();
   }
+  // private setByInput = () => {
+  //   this.props.setByInput();
+  // }
 
   private renderPhotoButton = (): React.ReactElement<ButtonProps> => {
     const { themedStyle } = this.props;
@@ -74,6 +78,7 @@ class ProfileSettings1Component extends React.Component<ProfileSettings1Props> {
             style={themedStyle.photo}
             source={profile.photo.imageSource}
             button={this.renderPhotoButton}
+            // size='small'
           />
         </View>
         <View style={themedStyle.infoSection}>
@@ -120,7 +125,7 @@ class ProfileSettings1Component extends React.Component<ProfileSettings1Props> {
             style={themedStyle.profileSetting}
             hint='Phone Number'
             value={profile.phoneNumber}
-            // onPressHandle={()=> {}}
+            // onPressHandle={this.setByInput}
           />
           <ProfileSetting
               style={themedStyle.profileSetting}

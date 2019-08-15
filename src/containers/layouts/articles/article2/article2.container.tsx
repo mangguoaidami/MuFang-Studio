@@ -8,10 +8,12 @@ interface State {
   article: Article;
 }
 
+
 export class Article2Container extends React.Component<NavigationScreenProps, State> {
 
   public state: State = {
-    article: articles[0],
+    // article: articles[0],
+    article: this.props.navigation.getParam('params')
   };
 
   private onCommentPress = () => {
@@ -23,6 +25,7 @@ export class Article2Container extends React.Component<NavigationScreenProps, St
   };
 
   public render(): React.ReactNode {
+    console.log('NavigationScreenProps', this.state.article)
     return (
       <Article2
         article={this.state.article}
