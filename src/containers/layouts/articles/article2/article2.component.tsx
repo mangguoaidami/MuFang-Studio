@@ -1,7 +1,8 @@
 import React from 'react';
 import {
   ImageBackground,
-  View
+  View,
+  TouchableOpacity,
 } from 'react-native';
 import {
   ThemedComponentProps,
@@ -39,6 +40,10 @@ class Article2Component extends React.Component<Article2Props> {
     this.props.onLikePress();
   };
 
+  private booking = () => {
+    console.log('立即约课')
+  }
+
   public render(): React.ReactNode {
     const { themedStyle, article } = this.props;
     // console.log('article', article);
@@ -73,12 +78,15 @@ class Article2Component extends React.Component<Article2Props> {
             onLikePress={this.onLikeButtonPress}>
             <View style={themedStyle.dateContainer}>
               {ClockIconOutline(themedStyle.dateIcon)}
-              <Text
-                style={themedStyle.dateLabel}
-                appearance='hint'
-                category='p2'>
-                {article.date}
-              </Text>
+              <TouchableOpacity onPress={this.booking}>
+                <Text
+                  style={themedStyle.dateLabel}
+                  appearance='hint'
+                  category='p2'>
+                  立即预约
+                </Text>
+              </TouchableOpacity>
+              
             </View>
           </ArticleActivityBar>
       </ContainerView>

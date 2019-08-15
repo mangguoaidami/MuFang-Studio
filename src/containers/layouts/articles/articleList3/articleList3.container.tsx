@@ -24,7 +24,7 @@ export class ArticleList3Container extends React.Component<NavigationScreenProps
   };
 
   private onItemCommentPress = (article: Article) => {
-
+    // console.log('ok')
   };
 
   public render(): React.ReactNode {

@@ -39,7 +39,7 @@ class ListContainerComponent extends React.Component<ComponentProps> {
             {/* <Text style={themedStyle.text}>sadasd</Text> */}
             <Agenda
             items={this.state.items}
-            loadItemsForMonth={this.loadItems.bind(this)}
+            loadItemsForMonth={this.loadItems.bind(this)} //变更月份获取月份数据
             selected={new Date()}
             renderItem={this.renderItem.bind(this)}
             renderEmptyDate={this.renderEmptyDate.bind(this)}
@@ -67,19 +67,42 @@ class ListContainerComponent extends React.Component<ComponentProps> {
   }
 
   loadItems(day) {
+    console.log('当前月份：', day.month);
+    console.log('items-',this.state.items)
+
+    //某个月时间段安排上课时间天(array)
+    let dateArray = [
+      {date: '2019-07-21', time: '09:20', courseName: '艺术'},
+      {date: '2019-07-31', time: '09:20', courseName: '音乐'},
+      {date: '2019-08-21', time: '09:20', courseName: '形体'},
+      {date: '2019-09-21', time: '09:20', courseName: '舞蹈'}
+    ]
+
     setTimeout(() => {
       for (let i = -15; i < 85; i++) {
         const time = day.timestamp + i * 24 * 60 * 60 * 1000;
         const strTime = this.timeToString(time);
         if (!this.state.items[strTime]) {
           this.state.items[strTime] = [];
-          const numItems = Math.floor(Math.random() * 5);
-          for (let j = 0; j < numItems; j++) {
-            this.state.items[strTime].push({
-              name: 'Item for ' + strTime,
-              height: Math.max(50, Math.floor(Math.random() * 150))
-            });
-          }
+          // const numItems = Math.floor(Math.random() * 5);
+          // for (let j = 0; j < numItems; j++) {
+          //   console.log('strTime', strTime)
+          //   this.state.items[strTime].push({
+          //     name: '课程时间为 ' + strTime,
+          //     height: Math.max(50, Math.floor(Math.random() * 150))
+          //   });
+          // }
+          /**
+           * 处理添加备注的时间点--2019-08-08
+           */
+          dateArray.forEach(el=> {
+            if(strTime == el.date){
+              this.state.items[el.date].push({
+                name: `课程时间为: ${el.date} ${el.time} \n 课程：${el.courseName}`,
+                height: Math.max(50, Math.floor(Math.random() * 150))
+              });
+            }
+          });
         }
       }
       //console.log(this.state.items);
